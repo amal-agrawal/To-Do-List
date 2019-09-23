@@ -84,7 +84,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                                <connections>
+                                    <action selector="toDoFieldChanged:" destination="4Jw-MM-wY2" eventType="editingDidEnd" id="BuW-Zg-phC"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -103,6 +106,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="saveBarButton" destination="Me4-Uc-zKD" id="SfX-Za-Tdo"/>
                         <outlet property="toDoField" destination="26o-qV-n13" id="AMN-nn-NyG"/>
                     </connections>
                 </viewController>
