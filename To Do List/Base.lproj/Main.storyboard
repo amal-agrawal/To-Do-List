@@ -50,6 +50,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="8X6-sa-xar" id="ZM3-o9-mop"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -87,13 +90,18 @@
                                 <action selector="cancelPressed:" destination="4Jw-MM-wY2" id="3lF-3P-xM9"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Me4-Uc-zKD"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Me4-Uc-zKD">
+                            <connections>
+                                <segue destination="FQl-So-dg9" kind="unwind" identifier="UnwindFromSave" unwindAction="unwindfromDetailedViewControllerWithSegue:" id="au6-BC-e4A"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="toDoField" destination="26o-qV-n13" id="AMN-nn-NyG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="43p-f7-Jrb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="FQl-So-dg9" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3729" y="-37"/>
         </scene>
